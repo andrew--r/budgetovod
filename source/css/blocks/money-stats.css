@@ -1,0 +1,48 @@
+.money-stats {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-around;
+
+	&__currency {
+		font-size: 1.2rem;
+	}
+
+	&__value {
+		position: relative;
+		font-size: 1.8rem;
+		font-weight: bold;
+		white-space: nowrap;
+
+		/* подпись */
+		&::before {
+			position: absolute;
+			left: 0;
+			font-size: 0.8rem;
+			font-weight: normal;
+		}
+
+		&::after {
+			color: var(--color-muted);
+		}
+
+		&--earned {
+			padding-top: 1rem;
+			color: green;
+
+			&::before {
+				content: 'заработано';
+				top: 0;
+			}
+		}
+
+		&--spent {
+			padding-bottom: 0.8rem;
+			color: red;
+
+			&::before {
+				content: 'потрачено';
+				bottom: 0;
+			}
+		}
+	}
+}

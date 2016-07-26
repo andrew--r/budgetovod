@@ -1,0 +1,38 @@
+.tabs-nav {
+	display: flex;
+	align-items: center;
+	padding-bottom: 2rem;
+	
+	&:not(:first-child) {
+		padding-top: 2rem;
+	}
+	
+	&__item {
+		flex: 1 1 100%;
+		font-size: .9rem;
+		color: var(--color-blue);
+		border: 1px solid var(--color-blue);
+		outline: 0;
+		line-height: 1.5rem;
+		white-space: nowrap;
+		background: transparent;
+		cursor: pointer;
+		
+		&--active {
+			background: var(--color-blue);
+			color: #fff;
+		}
+		
+		&:not(:first-child) {
+			border-left: 0;
+		}
+
+		&:first-child {
+			border-radius: 5px 0 0 5px;
+		}
+
+		&:last-child {
+			border-radius: 0 5px 5px 0;
+		}
+	}
+}

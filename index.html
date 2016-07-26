@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+			Customize this policy to fit your own app's needs. For more guidance, see:
+				https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+			Some notes:
+				* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+				* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+				* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+					* Enable inline JS: add 'unsafe-inline' to default-src
+			-->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+
+		<title>Бюджетовод</title>
+
+		<link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+		<link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+		<link rel="stylesheet" href="build/css/bundle.css">
+	</head>
+
+	<body>
+		<!-- Status bar overlay for full screen mode (PhoneGap) -->
+		<div class="statusbar-overlay"></div>
+
+		<div class="views application">
+			<div class="view view-main">
+				<!-- navbar -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="#" class="link" data-modal="earn">+<span class="ruble">руб.</span></a>
+						</div>
+						<div class="center sliding">Бюджетовод</div>
+						<div class="right">
+							<a href="#" class="link" data-modal="spend">−<span class="ruble">руб.</span></a>
+							 <!-- <a href="settings.html" class="link icon-only open-panel"><i class="icon icon-form-settings"></i></a> -->
+						</div>
+					</div>
+				</div>
+				<!-- /navbar -->
+
+				<div class="pages navbar-through toolbar-through">
+					<div data-page="index" class="page">
+						<div class="page-content">
+							<div class="content-block">
+								<div class="tabs-nav">
+									<button data-tab="day" class="tabs-nav__item tabs-nav__item--active">День</button>
+									<button data-tab="week" class="tabs-nav__item">Неделя</button>
+									<button data-tab="month" class="tabs-nav__item">Месяц</button>
+									<button data-tab="all" class="tabs-nav__item">Всего</button>
+								</div>
+
+								<div class="money-stats">
+									<div class="money-stats__value money-stats__value--earned number number--currency-rur"></div>
+									<div class="money-stats__value money-stats__value--spent number number--currency-rur"></div>
+								</div>
+
+								<div class="result-stats">
+									<div class="result-stats__annotation"></div>
+									<div class="result-stats__value number number--currency-rur"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="cordova.js"></script>
+		<script src="lib/framework7/js/framework7.min.js"></script>
+		<script src="build/js/bundle.js"></script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+.number {
+	&--currency-rur {
+		&::after {
+			content: 'руб.';
+			padding-left: .15em;
+			font-family: 'RubArial';
+		}
+	}
+}
