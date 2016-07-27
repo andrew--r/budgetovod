@@ -139,7 +139,7 @@ class App {
 }
 
 function createPrompt(title, onSuccess) {
-	application.f7.modal({
+	const prompt = application.f7.modal({
 		title,
 		afterText: createInputMarkup('number'),
 		buttons: [
@@ -152,6 +152,10 @@ function createPrompt(title, onSuccess) {
 				onClick: onSuccess,
 			},
 		],
+	});
+
+	prompt.addEventListener('opened', (event) => {
+		event.currentTarget.querySelector('input').focus();
 	});
 }
 
