@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ru.andrew-r.budetovod" version="0.9.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.andrew.Budetovod" version="0.9.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 	<name>Бюджетовод</name>
 	<description>Простой учёт расходов и доходов</description>
 	<author email="scorpion21.97@gmail.com" href="http://andrew-r.ru">Andrew Romanov</author>
@@ -26,9 +26,6 @@
 		<splash src="res/screens/android/mdpi.png" qualifier="mdpi" />
 		<splash src="res/screens/android/hdpi.png" qualifier="hdpi" />
 		<splash src="res/screens/android/xhdpi.png" qualifier="xhdpi" />
-		<splash src="res/screens/android/fr-xhdpi.png" qualifier="fr-xhdpi" />
-		<splash src="res/screens/android/portrait-xxhdpi.png" qualifier="port-xxhdpi" />
-		<splash src="res/screens/android/landscape-xxhdpi.png" qualifier="land-xxhdpi" />
 	</platform>
 	<preference name="DisallowOverscroll" value="true" />
 	<plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
