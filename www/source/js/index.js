@@ -196,9 +196,9 @@ function onDeviceReady() {
 	application.initialize();
 }
 
+function handleErrors() {
+	navigator.app.exitApp();
+}
+
 document.addEventListener('deviceready', onDeviceReady);
-
-
-
-
-
+window.onerror = handleErrors;
